@@ -9,6 +9,13 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <properties>
         <project.java.version>1.8</project.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,6 +23,14 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -28,7 +43,6 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -69,6 +83,10 @@
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
