@@ -5,5 +5,6 @@
     <p>This is a simple web page with Weather Service from OWM</p>
 
     <#include "parts/generalweather.ftl">
+    <#include "parts/detailedweather.ftl">
     <#include "parts/footer.ftl">
 </@c.page>

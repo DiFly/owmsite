@@ -1,11 +1,10 @@
-<div align="center">
+<div align="left">
     <p>
-        Place for big banner with weather
+        Place for detailed information with weather
     </p>
-    <h2>
+    <h4>
         ${cityname?ifExists}
         ${citytemp?ifExists}
         ${date?ifExists}
-    </h2>
-
+    </h4>
 </div>

@@ -10,7 +10,7 @@ import java.util.Iterator;
 
 public class JSONConverter {
     private String inString;
-    WeatherObject weatherObject;
+    private WeatherObject weatherObject;
 
     public void readJSON() throws IOException {
         weatherObject = new WeatherObject();
@@ -126,6 +126,10 @@ public class JSONConverter {
         weatherObject.setCod(codNode.asInt());
         System.out.println("cod = " + weatherObject.getCod());
 
+    }
+
+    public WeatherObject getWeatherObject() {
+        return weatherObject;
     }
 
     public JSONConverter(String inString) {
