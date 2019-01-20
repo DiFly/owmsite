@@ -14,12 +14,13 @@ import java.net.URISyntaxException;
 
 public class WeatherClient {
 //    private String API_KEY = "xxx";
-    private String API_KEY = "b6907d289e10d714a6e88b30761fae22";
+    private String API_KEY = "b6907d289e10d714a6e88b30761fae22"; //its test api key from public site OWM
 //    private String hostURL = "api.openweathermap.org/data/2.5";
     private String hostURL = "samples.openweathermap.org/data/2.5";
     private String pathURL = "/weather";
     private String cityNameParamURL = "London";
     private URI uri;
+    private String jsonString;
 
     //Create Client
     public void createClient() throws IOException {
@@ -33,6 +34,7 @@ public class WeatherClient {
             System.out.println(response.getStatusLine().toString());
             String str = getEntityToString(response.getEntity().getContent());
             System.out.println(str);
+            jsonString = str;
         } finally {
             response.close();
         }
@@ -75,6 +77,10 @@ public class WeatherClient {
     public WeatherClient(String API_KEY, String cityNameParamURL) {
         this.API_KEY = API_KEY;
         this.cityNameParamURL = cityNameParamURL;
+    }
+
+    public String getJsonString() {
+        return jsonString;
     }
 
 }

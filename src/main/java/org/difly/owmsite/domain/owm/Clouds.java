@@ -4,6 +4,10 @@ public class Clouds {
     //"clouds":{"all":75},
     private int all;
 
+    public Clouds(int all) {
+        this.all = all;
+    }
+
     public int getAll() {
         return all;
     }

@@ -39,6 +39,13 @@ public class Weather {
         this.icon = icon;
     }
 
+    public Weather(int id, String main, String description, String icon) {
+        this.id = id;
+        this.main = main;
+        this.description = description;
+        this.icon = icon;
+    }
+
     @Override
     public String toString() {
         return getId() + ", " + getMain() + ", " + getDescription() + ", " + getIcon();

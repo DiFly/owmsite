@@ -1,15 +1,16 @@
 package org.difly.owmsite.domain.owm;
 
-public class WeatherJSONResponceObject {
+public class WeatherObject {
     private Coord coord;
     private Weather weather;
     private String base;
     private Main main;
+    private int visibility;
     private Wind wind;
     private Clouds clouds;
     private Rain rain;
     private Snow snow;
-    private String dt;
+    private long dt;
     private Sys sys;
     private long id;
     private String name;
@@ -47,6 +48,14 @@ public class WeatherJSONResponceObject {
         this.main = main;
     }
 
+    public int getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(int visibility) {
+        this.visibility = visibility;
+    }
+
     public Wind getWind() {
         return wind;
     }
@@ -79,11 +88,11 @@ public class WeatherJSONResponceObject {
         this.snow = snow;
     }
 
-    public String getDt() {
+    public long getDt() {
         return dt;
     }
 
-    public void setDt(String dt) {
+    public void setDt(long dt) {
         this.dt = dt;
     }
 

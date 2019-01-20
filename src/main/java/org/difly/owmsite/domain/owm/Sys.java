@@ -57,6 +57,15 @@ public class Sys {
         this.sunset = sunset;
     }
 
+    public Sys(int type, int id, double message, String country, long sunrise, long sunset) {
+        this.type = type;
+        this.id = id;
+        this.message = message;
+        this.country = country;
+        this.sunrise = sunrise;
+        this.sunset = sunset;
+    }
+
     @Override
     public String toString() {
         return getType() + ", " + getId() + ", " + getMessage() + ", " + getCountry() + ", " + getSunrise() + ", " + getSunset() + ", ";
