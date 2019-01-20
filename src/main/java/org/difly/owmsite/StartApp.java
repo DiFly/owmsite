@@ -2,11 +2,15 @@ package org.difly.owmsite;
 
 import org.difly.owmsite.weather.WeatherClient;
 
-public class Main {
-    public static void main(String[] args) {
+import java.io.IOException;
+
+public class StartApp {
+    public static void main(String[] args) throws IOException {
         System.out.println("Start APP OWM-Site");
 
         WeatherClient weatherClient = new WeatherClient();
+        weatherClient.createURI();
+        weatherClient.createClient();
 
         System.out.println("Close APP OWM-Site");
     }
